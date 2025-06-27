@@ -1,9 +1,10 @@
 import express from "express";
 import { client } from "@repo/db/client";
+import { Request } from "express";
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res) => {
   res.send("hi there");
 });
 
